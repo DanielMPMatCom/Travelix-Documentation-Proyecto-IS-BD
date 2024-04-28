@@ -1,0 +1,160 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{pdflscape}
+\usepackage{svg}
+\usepackage{fontawesome5}
+\usepackage{subcaption}
+\geometry{margin=2in}
+
+
+\title{\huge{Especificación de Requerimientos de Software \\ para \\ Agencia de Viajes. \\ Travelix.}
+
+\includegraphics[width=0.5\textwidth]{travelix.png}
+}
+\author{Daniel Toledo \and Daniel Machado \and Osvaldo Moreno \and José Antonio Concepción \\ Líder: Daniel Toledo \\ \\ Equipo 3 Semigrupo 2}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Propósito del Documento}
+
+\subsection{Alcance del Producto}
+El alcance del producto incluye la creación de una aplicación que permita a las agencias 
+de viajes gestionar eficientemente sus servicios, reservaciones y actividades relacionadas.
+\section{Descripción General}
+
+\subsection{Funciones del Producto}
+    \textbf{Actualización de Ofertas:}
+        Permite al personal del departamento de marketing actualizar ofertas, incluyendo 
+        información sobre hoteles, excursiones y paquetes turísticos.
+
+    \textbf{Reservaciones:}
+        Facilita a los agentes de venta la realización de reservaciones para turistas 
+        individuales y grupos, gestionando detalles como compañía aérea, hoteles, fechas, etc.
+
+    \textbf{Consulta de Información:}
+        Proporciona funciones para consultar información detallada, como el listado de hoteles 
+        en paquetes, la cantidad de reservaciones, etc.
+
+\subsection{Características de los usuarios}
+    \textbf{Experiencia:}
+        Se espera que el personal del departamento de marketing tenga experiencia en la actualización 
+        de ofertas y que los agentes de venta tengan conocimientos básicos en la realización de 
+        reservaciones. Los turistas individuales pueden tener variados niveles de experiencia en 
+        el uso de aplicaciones de reservas en línea.
+
+    \textbf{Plataformas:}
+        La aplicación deberá ser amigable tanto para usuarios con experiencia en entornos de oficina 
+        como para turistas individuales que pueden acceder desde diferentes dispositivos, 
+        como computadoras y dispositivos móviles.
+
+\subsection{Restricciones Generales}
+    \textbf{Aspecto Visual:}
+        Se prefiere que el diseño visual se asemeje a sitios web existentes, por ejemplo, adoptando 
+        un estilo similar a Tripadvisor.
+
+    
+\subsection{Dependencias y suposiciones}
+    \textbf{Navegación:}
+    Se establece una restricción en la navegación, limitándola a no más de tres niveles de profundidad.
+
+    \textbf{Ubicación de Menús:}
+    Se sugiere que los menús fijos estén ubicados en el lateral derecho de la interfaz.
+
+
+\section{Requerimientos Específicos}
+\subsection{Requerimientos Funcionales}
+    $\cdot$ \textbf{Obtención del Listado de Hoteles en Paquetes:}
+        La aplicación deberá proporcionar una funcionalidad que permita a los usuarios 
+        obtener de manera eficiente el listado completo de hoteles que están incluidos 
+        en los paquetes de viajes ofrecidos por las agencias. Esta información es crucial 
+        para los turistas que desean conocer las opciones de alojamiento disponibles en los 
+        paquetes turísticos.
+
+     $\cdot$ \textbf{Cálculo de Reservaciones y Monto Total:}
+        La aplicación debe ser capaz de realizar un seguimiento preciso de todas las reservaciones 
+        realizadas en las agencias de viajes. Deberá calcular automáticamente la cantidad total de 
+        reservaciones realizadas y el monto económico total asociado. Esto proporcionará a las agencias
+         información valiosa sobre la demanda de sus servicios y permitirá una mejor planificación y 
+         gestión financiera.
+
+    $\cdot$ \textbf{Obtención de Datos de Turistas Frecuentes:}
+        La aplicación deberá identificar y presentar los nombres y direcciones electrónicas de 
+        aquellos turistas que han realizado reservaciones individuales a Cuba en más de una ocasión. 
+        Esto facilitará a las agencias de viajes establecer relaciones más personalizadas con estos clientes 
+        frecuentes, ofreciendo servicios adaptados a sus preferencias.
+
+    $\cdot$ \textbf{Obtención de Horarios y Lugares de Salida de Excursiones en Fines de Semana Extendidos:}
+        La aplicación debe proporcionar una funcionalidad que permita obtener la información detallada 
+        sobre los lugares y horarios de salida de todas las excursiones ofrecidas durante los fines de 
+        semana extendidos (viernes, sábado y domingo). Esta información, ordenada de manera apropiada, 
+        será presentada en la interfaz de la agencia para su consulta y visualización.
+
+    $\cdot$ \textbf{Análisis de Paquetes con Precio Superior al Promedio:}
+        La aplicación debe ser capaz de analizar y calcular la cantidad de paquetes cuyo precio está por encima 
+        del precio promedio de todos los paquetes disponibles. Este análisis permitirá a las agencias identificar 
+        y destacar paquetes de mayor valor, así como ajustar estrategias de precios.
+
+    $\cdot$ \textbf{Reservación Apropiada para Turista Individual:}
+        La aplicación deberá proporcionar una funcionalidad eficiente para realizar reservaciones que 
+        correspondan de manera apropiada a un turista individual. Esto implica seleccionar la compañía 
+        aérea, gestionar la reserva en los hoteles deseados, establecer fechas de llegada y salida, y calcular 
+        el precio total de manera precisa.
+
+    $\cdot$ \textbf{Aspectos generales del sistema: }
+        El sistema debe ser "tipo web, para que cualquier persona pueda acceder a los servicios que se brindan 
+        y los trabajadores también tengan una interacción sencilla". 
+    
+    $\cdot$ \textbf{Posibles aspectos futuros: }
+        Dadas las interacciones entre cliente y operador de ventas, es posible que un futuro se quiera registrar 
+        el operador que tramita la venta para obtener bonos específicos por cantidad de ventas.
+
+\subsection{Requerimientos no funcionales}
+    $\cdot$ \textbf{Eficiencia en el Rendimiento:}
+        La aplicación debe mantener un rendimiento eficiente incluso cuando maneje grandes cantidades de datos, 
+        garantizando tiempos de respuesta rápidos y una experiencia de usuario fluida.
+
+    $\cdot$ \textbf{Interfaz de Usuario Intuitiva:}
+        La interfaz de usuario debe ser intuitiva y fácil de usar para el personal del departamento de marketing 
+        y los agentes de venta, sin requerir un extenso entrenamiento.
+
+    $\cdot$ \textbf{Seguridad de Datos:}
+        La seguridad de la información, especialmente los datos personales de los turistas, debe ser una prioridad. 
+        La aplicación debe implementar medidas robustas de seguridad para proteger la privacidad y confidencialidad 
+        de la información del cliente. Debe existir un proceso de autenticación básico para cada usuario. Además se 
+        debe crear una jerarquía de permisos para diferenciar administradores de turistas. 
+
+\subsection{Requerimientos de entorno}
+    $\cdot$ \textbf{Compatibilidad con Sistemas Operativos:}
+        La aplicación debe ser compatible con una variedad de sistemas operativos, incluyendo Windows, macOS y Linux, 
+        para garantizar su accesibilidad a una amplia audiencia de usuarios.
+
+    $\cdot$ \textbf{Conexión a Internet:}
+        Para la actualización en tiempo real de ofertas y la realización de reservaciones, la aplicación debe requerir 
+        acceso a una conexión a Internet estable y segura.
+
+    $\cdot$ \textbf{Escalabilidad:}
+        La aplicación debe ser diseñada de manera que sea escalable, capaz de manejar el crecimiento en la cantidad de 
+        agencias, turistas y servicios ofrecidos sin comprometer su rendimiento.
+
+    $\cdot$ \textbf{Tecnologías:}
+        El cliente no tiene conocimientos avanzados de informática por lo que le proponemos dadas sus peticiones y amplia 
+        capacidad adquisitiva: \\ 
+        - Alquilar servidores para las bases de datos en la nube. \\
+        - Utilizar React y .Net para el desarrollo de la app.
+\newpage
+\section{Anexos}
+
+\end{document}
